@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/appbar"
+        layout="@layout/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ViewFlipper
+        android:id="@+id/viewFlipper"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:autoStart="true"
+        android:flipInterval="1800"
+        android:inAnimation="@android:anim/slide_in_left"
+        android:outAnimation="@android:anim/slide_out_right"
+        app:layout_constraintTop_toBottomOf="@id/appbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/cartiad1" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/cartiad2" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/cartiad3" />
+    </ViewFlipper>
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="- Groceries - "
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/viewFlipper"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        />
+
+    <LinearLayout
+        android:id="@+id/firstRow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/textView5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5">
+
+        <ImageButton
+            android:id="@+id/button1"
+            android:background="@drawable/box_items"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:contentDescription="Button 1"
+            android:onClick="button1Clicked"
+            android:src="@drawable/cartileg" />
+
+        <ImageButton
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/cartileg"
+            android:contentDescription="Button 2"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@null"
+            android:onClick="button1Clicked"
+            android:clickable="true"/>
+
+        <ImageButton
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/cartileg"
+            android:contentDescription="Button 3"
+            android:background="@null"
+            android:onClick="button1Clicked"
+            android:clickable="true"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/secondRow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintTop_toBottomOf="@id/firstRow">
+
+        <ImageButton
+            android:id="@+id/button4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/cartileg"
+            android:contentDescription="Button 4"
+            android:background="@null"
+            android:onClick="button1Clicked"
+            android:clickable="true"/>
+
+        <ImageButton
+            android:id="@+id/button5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/cartileg"
+            android:contentDescription="Button 5"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@null"
+            android:onClick="button1Clicked"
+            android:clickable="true"/>
+
+        <ImageButton
+            android:id="@+id/button6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/cartileg"
+            android:contentDescription="Button 6"
+            android:background="@null"
+            android:onClick="button1Clicked"
+            android:clickable="true"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/thirdRow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintTop_toBottomOf="@id/secondRow">
+
+        <ImageButton
+            android:id="@+id/button7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/cartileg"
+            android:contentDescription="Button 7"
+            android:background="@null"
+            android:onClick="button1Clicked"
+            android:clickable="true"/>
+
+        <ImageButton
+            android:id="@+id/button8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/cartileg"
+            android:contentDescription="Button 8"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@null"
+            android:onClick="button1Clicked"
+            android:clickable="true"/>
+
+        <ImageButton
+            android:id="@+id/button9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/cartileg"
+            android:contentDescription="Button 9"
+            android:background="@null"
+            android:onClick="button1Clicked"
+            android:clickable="true"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
