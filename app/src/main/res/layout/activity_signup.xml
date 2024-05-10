@@ -126,36 +126,20 @@
         app:layout_constraintTop_toBottomOf="@+id/passwordInput" />
 
 
-    <TextView
-        android:id="@+id/termsandcondition"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:contextClickable="true"
-        android:text="Terms and Condition"
-        android:textColor="#033647"
-        android:textSize="10sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/checkBox"
-        app:layout_constraintTop_toBottomOf="@+id/confirmpasswordInput"
-        app:layout_constraintVertical_bias="0.582" />
-
     <CheckBox
         android:id="@+id/checkBox"
-        android:layout_width="99dp"
-        android:layout_height="24dp"
+        android:layout_width="185dp"
+        android:layout_height="26dp"
         android:buttonTint="#000000"
-        android:text="Agreee with "
+        android:text="Agreee with Terms and Condition"
         android:textAlignment="textEnd"
         android:textColor="#000000"
         android:textSize="10sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/signinbutton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.339"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/confirmpasswordInput"
-        app:layout_constraintVertical_bias="0.581"
         tools:shadowColor="#000000" />
 
     <TextView

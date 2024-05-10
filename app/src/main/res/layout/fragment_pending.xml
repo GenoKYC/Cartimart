@@ -6,12 +6,5 @@
     tools:context=".Pending"
     >
 
-    <include
-        layout="@layout/appbar"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/pending_fragment"
-        android:textSize="27sp"
-        android:layout_gravity="center"/>
+
 </FrameLayout>

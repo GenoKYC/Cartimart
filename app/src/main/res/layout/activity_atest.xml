@@ -9,10 +9,10 @@
 
 
     <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp">
+        android:layout_width="339dp"
+        android:layout_height="444dp"
+        tools:layout_editor_absoluteX="56dp"
+        tools:layout_editor_absoluteY="172dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -24,134 +24,261 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="20dp">
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
 
-                <!-- Address Option -->
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="20dp"
-                    android:layout_height="131dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/box_items">
+                <!-- First Row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
-                    <ImageView
-                        android:id="@+id/img_addr"
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:src="@drawable/fruits_item"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.484"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.725" />
+                    <!-- Address Option -->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="20dp"
+                        android:layout_height="131dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/box_items">
 
-                    <TextView
-                        android:id="@+id/text_addr"
-                        android:layout_width="66dp"
-                        android:layout_height="21dp"
-                        android:text="FRUITS"
-                        android:textAlignment="center"
-                        android:textColor="@color/black"
-                        android:textSize="15sp"
-                        android:textStyle="bold"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="@+id/img_addr"
-                        app:layout_constraintStart_toStartOf="@+id/img_addr"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.145" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
+                        <ImageView
+                            android:id="@+id/img_addr"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/fruits_item"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.484"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.725" />
 
-                <!-- Auto-Schedule Option -->
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="20dp"
-                    android:layout_height="131dp"
-                    android:layout_marginStart="12dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/box_items">
+                        <TextView
+                            android:id="@+id/text_addr"
+                            android:layout_width="66dp"
+                            android:layout_height="21dp"
+                            android:text="FRUITS"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/img_addr"
+                            app:layout_constraintStart_toStartOf="@+id/img_addr"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.145" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
 
-                    <ImageView
-                        android:id="@+id/img_autosched"
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:src="@drawable/veg_item"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.484"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.725" />
+                    <!-- Auto-Schedule Option -->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="20dp"
+                        android:layout_height="131dp"
+                        android:layout_marginStart="12dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/box_items">
 
-                    <TextView
-                        android:id="@+id/text_autosched"
-                        android:layout_width="66dp"
-                        android:layout_height="21dp"
-                        android:text="VEGGIES"
-                        android:textAlignment="center"
-                        android:textColor="@color/black"
-                        android:textSize="15sp"
-                        android:textStyle="bold"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="@+id/img_autosched"
-                        app:layout_constraintStart_toStartOf="@+id/img_autosched"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.145" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
+                        <ImageView
+                            android:id="@+id/img_autosched"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/veg_item"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.484"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.725" />
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="20dp"
-                    android:layout_height="131dp"
-                    android:layout_marginStart="12dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/box_items">
+                        <TextView
+                            android:id="@+id/text_autosched"
+                            android:layout_width="66dp"
+                            android:layout_height="21dp"
+                            android:text="VEGGIES"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/img_autosched"
+                            app:layout_constraintStart_toStartOf="@+id/img_autosched"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.145" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
 
-                <ImageView
-                    android:id="@+id/img_fishes"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:src="@drawable/fruits_item"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.484"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.725" />
+                    <!-- Fishes Option -->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="20dp"
+                        android:layout_height="131dp"
+                        android:layout_marginStart="12dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/box_items">
 
-                <TextView
-                    android:id="@+id/text_fishes"
-                    android:layout_width="66dp"
-                    android:layout_height="21dp"
-                    android:text="FISHES"
-                    android:textAlignment="center"
-                    android:textColor="@color/black"
-                    android:textSize="15sp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="@+id/img_fishes"
-                    app:layout_constraintStart_toStartOf="@+id/img_fishes"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.145" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
+                        <ImageView
+                            android:id="@+id/img_fishes"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/fruits_item"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.484"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.725" />
 
+                        <TextView
+                            android:id="@+id/text_fishes"
+                            android:layout_width="66dp"
+                            android:layout_height="21dp"
+                            android:text="FISHES"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/img_fishes"
+                            app:layout_constraintStart_toStartOf="@+id/img_fishes"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.145" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </LinearLayout>
 
+                <!-- Second Row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <!-- Additional ConstraintLayout 1 -->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="20dp"
+                        android:layout_height="131dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/box_items">
+
+                        <!-- ImageView -->
+                        <ImageView
+                            android:id="@+id/img1"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/fruits_item"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.484"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.725" />
+
+                        <!-- TextView -->
+                        <TextView
+                            android:id="@+id/text1"
+                            android:layout_width="66dp"
+                            android:layout_height="21dp"
+                            android:text="PAGKAIN"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/img1"
+                            app:layout_constraintStart_toStartOf="@+id/img1"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.145" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <!-- Additional ConstraintLayout 2 -->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="20dp"
+                        android:layout_height="131dp"
+                        android:layout_marginStart="12dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/box_items">
+
+                        <!-- ImageView -->
+                        <ImageView
+                            android:id="@+id/img2"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/fruits_item"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.484"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.725" />
+
+                        <!-- TextView -->
+                        <TextView
+                            android:id="@+id/text2"
+                            android:layout_width="66dp"
+                            android:layout_height="21dp"
+                            android:text="SOFTDRINKS"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/img2"
+                            app:layout_constraintStart_toStartOf="@+id/img2"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.145" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <!-- Additional ConstraintLayout 3 -->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="20dp"
+                        android:layout_height="131dp"
+                        android:layout_marginStart="12dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/box_items">
+
+                        <!-- ImageView -->
+                        <ImageView
+                            android:id="@+id/img3"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/fruits_item"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.484"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.725" />
+
+                        <!-- TextView -->
+                        <TextView
+                            android:id="@+id/text3"
+                            android:layout_width="66dp"
+                            android:layout_height="21dp"
+                            android:text="BABYBUY"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/img3"
+                            app:layout_constraintStart_toStartOf="@+id/img3"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.145" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </LinearLayout>
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="160dp"
-                android:layout_height="130dp"
-                android:layout_marginTop="15dp"
-                android:orientation="horizontal"
-                >
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
 
-                <!-- History Option -->
+                <!-- Additional ConstraintLayout 1 -->
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="21dp"
+                    android:layout_width="20dp"
                     android:layout_height="131dp"
                     android:layout_weight="1"
                     android:background="@drawable/box_items">
 
+                    <!-- ImageView -->
                     <ImageView
-                        android:id="@+id/img_addr"
+                        android:id="@+id/img4"
                         android:layout_width="80dp"
                         android:layout_height="80dp"
                         android:src="@drawable/fruits_item"
@@ -162,26 +289,103 @@
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.725" />
 
+                    <!-- TextView -->
                     <TextView
-                        android:id="@+id/text_addr"
+                        android:id="@+id/text4"
                         android:layout_width="66dp"
                         android:layout_height="21dp"
-                        android:text="FRUITS"
+                        android:text="PAGKAIN"
                         android:textAlignment="center"
                         android:textColor="@color/black"
                         android:textSize="15sp"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="@+id/img_addr"
-                        app:layout_constraintStart_toStartOf="@+id/img_addr"
+                        app:layout_constraintEnd_toEndOf="@+id/img4"
+                        app:layout_constraintStart_toStartOf="@+id/img4"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.145" />
-
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
+                <!-- Additional ConstraintLayout 2 -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="20dp"
+                    android:layout_height="131dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/box_items">
 
+                    <!-- ImageView -->
+                    <ImageView
+                        android:id="@+id/img5"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/fruits_item"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.484"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.725" />
+
+                    <!-- TextView -->
+                    <TextView
+                        android:id="@+id/text5"
+                        android:layout_width="66dp"
+                        android:layout_height="21dp"
+                        android:text="SOFTDRINKS"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/img5"
+                        app:layout_constraintStart_toStartOf="@+id/img5"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.145" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <!-- Additional ConstraintLayout 3 -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="20dp"
+                    android:layout_height="131dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/box_items">
+
+                    <!-- ImageView -->
+                    <ImageView
+                        android:id="@+id/img7"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/fruits_item"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.484"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.725" />
+
+                    <!-- TextView -->
+                    <TextView
+                        android:id="@+id/text7"
+                        android:layout_width="66dp"
+                        android:layout_height="21dp"
+                        android:text="BABYBUY"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/img7"
+                        app:layout_constraintStart_toStartOf="@+id/img7"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.145" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
             </LinearLayout>
 
+
         </LinearLayout>
+
+
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

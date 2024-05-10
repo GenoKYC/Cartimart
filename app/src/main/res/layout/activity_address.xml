@@ -5,39 +5,10 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Address">
+    tools:context=".Address"
+    android:background="#FCE8D2">
 
 
-    <ImageView
-        android:id="@+id/image_backgroundlogo"
-        android:layout_width="413dp"
-        android:layout_height="914dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/bg_logo"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.542" />
 
-    <androidx.appcompat.widget.Toolbar
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        tools:ignore="MissingConstraints"
-        android:background="#FF7F00">
-
-        <RelativeLayout
-            android:layout_width="75dp"
-            android:layout_height="50dp">
-
-            <ImageView
-                android:layout_width="70dp"
-                android:layout_height="wrap_content"
-                android:src="@drawable/cartimart" />
-
-        </RelativeLayout>
-
-    </androidx.appcompat.widget.Toolbar>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

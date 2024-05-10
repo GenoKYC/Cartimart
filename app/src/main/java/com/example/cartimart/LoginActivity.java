@@ -28,6 +28,10 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         clickablesignin = findViewById(R.id.create_acc);
+
+        /*
+        * Method that opens sign in screen / activity
+        * */
         clickablesignin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -35,12 +39,16 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
         signinbutton = findViewById(R.id.login_button);
         emailaddressInput = findViewById(R.id.emailaddressInput);
         passwordInput = findViewById(R.id.passwordInput);
         dbHelper = new Accountdatabase(this);
         checkbox = findViewById(R.id.checkBox);
 
+        emailaddressInput.setText("kylemarave5@gmail.com");
+        passwordInput.setText("12345678");
         signinbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

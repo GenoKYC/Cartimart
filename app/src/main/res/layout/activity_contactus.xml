@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".contactus"
+    android:background="#FCE8D2">
+
+    <include
+        android:id="@+id/include2"
+        layout="@layout/activity_ctgitem_toolbar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/fishes_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="220dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/include2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/include2"
+        app:layout_constraintTop_toTopOf="@id/include2"
+        app:layout_constraintVertical_bias="0.484" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/include2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:text="CONTACT US"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="300dp"
+                android:layout_height="250dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                app:srcCompat="@drawable/cartiloc" />
+
+            <ImageView
+                android:id="@+id/imageView9"
+                android:layout_width="290dp"
+                android:layout_height="250dp"
+                app:srcCompat="@drawable/cartistruc"
+                android:layout_marginTop="30dp"
+                android:layout_gravity="center_horizontal"/>
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Address: 123 Main Street, Barangay Maduya, \nCarmona, Cavite, Philippines"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:paddingLeft="12dp"
+                android:layout_marginTop="15dp"/>
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Contact No: +63 917 1234 567"
+                android:paddingLeft="15dp"
+                android:layout_marginTop="12dp"
+                />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:paddingLeft="15dp"
+                android:text="Email: cartimartcarmona@gmail.com" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

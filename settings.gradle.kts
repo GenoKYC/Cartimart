@@ -16,9 +16,11 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        mavenLocal()
     }
 }
 
 rootProject.name = "CartiMart"
 include(":app")
- 
+
+
