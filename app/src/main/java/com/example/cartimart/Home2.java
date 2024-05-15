@@ -2,6 +2,7 @@ package com.example.cartimart;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -61,12 +62,17 @@ public class Home2 extends Fragment {
         categoryGV = view.findViewById(R.id.idCartegory);
         ArrayList<Category> categoryModelArrayList = new ArrayList<Category>();
 //        categoryModelArrayList = hcat.getCategories();
-        categoryModelArrayList.add(new Category(1,"DSA", R.drawable.cartiad1, "2024-05-09"));
-        categoryModelArrayList.add(new Category(2,"JAVA", R.drawable.cartiad1, "2024-05-09"));
-        categoryModelArrayList.add(new Category(3,"C++", R.drawable.cartiad1, "2024-05-09"));
-        categoryModelArrayList.add(new Category(4,"Python", R.drawable.cartiad1, "2024-05-09"));
-        categoryModelArrayList.add(new Category(5,"Javascript", R.drawable.cartiad1, "2024-05-09"));
-        categoryModelArrayList.add(new Category(7, "DSA", R.drawable.cartiad1, "2024-05-09"));
+//        System.out.println(categoryModelArrayList);
+        categoryModelArrayList.add(new Category(1,"FRUITS", R.drawable.fruits_item, "2024-05-09"));
+        categoryModelArrayList.add(new Category(2,"VEGGIES", R.drawable.veggies_item, "2024-05-09"));
+        categoryModelArrayList.add(new Category(3,"FISH", R.drawable.fishes_item, "2024-05-09"));
+        categoryModelArrayList.add(new Category(4,"BEEF", R.drawable.beef_item, "2024-05-09"));
+        categoryModelArrayList.add(new Category(5,"POULTRY", R.drawable.poultry_item, "2024-05-09"));
+        categoryModelArrayList.add(new Category(7, "PORK", R.drawable.pork_item, "2024-05-09"));
+        categoryModelArrayList.add(new Category(8, "MILK", R.drawable.milk_item, "2024-05-09"));
+        categoryModelArrayList.add(new Category(9, "LEGUMES", R.drawable.legumes_item, "2024-05-09"));
+        categoryModelArrayList.add(new Category(10, "SUGAR", R.drawable.sugar_item, "2024-05-09"));
+        Log.d("CategoryArray", categoryModelArrayList.toString());
 
         CategorygridAdapter adapter = new CategorygridAdapter(this.getContext(), categoryModelArrayList);
         categoryGV.setAdapter(adapter);
@@ -75,56 +81,14 @@ public class Home2 extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 String catname = ((TextView)view.findViewById(R.id.catname)).getText().toString();
+                Category category = categoryModelArrayList.get(i);
 //                Toast.makeText(showMissions.this, "" + item, Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(getActivity(), CategoryItems.class);
                 intent.putExtra("activity_title", catname);
+                intent.putExtra("catid", category.getId());
                 startActivity(intent);
             }
         });
-
-//         Find the ConstraintLayout with ID fruits_box
-//        ConstraintLayout fruitsBox = view.findViewById(R.id.fruits_box);
-//
-//        // Set OnClickListener for fruits_box
-//        fruitsBox.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                // Handle the click event, navigate to another page
-//                // For example, start a new activity
-//                Intent intent = new Intent(getActivity(), CategoryItems.class);
-//                intent.putExtra("activity_title", "Fruits");
-//                startActivity(intent);
-//            }
-//        });
-//        // Find the ConstraintLayout with ID veggies_box
-//        ConstraintLayout veggiesBox = view.findViewById(R.id.veggies_box);
-//
-//        // Set OnClickListener for veggies_box
-//        veggiesBox.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                // Handle the click event for veggies_box
-//                // For example, start a new activity
-//                Intent intent = new Intent(getActivity(), CategoryItems.class);
-//                intent.putExtra("activity_title", "Veggies");
-//                startActivity(intent);
-//            }
-//        });
-//
-//        ConstraintLayout fishesBox = view.findViewById(R.id.fishes_box);
-//
-//        // Set OnClickListener for fishes_box
-//        fishesBox.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                // Handle the click event for fishes_box
-//                // For example, start a new activity
-//                Intent intent = new Intent(getActivity(), CategoryItems.class);
-//                intent.putExtra("activity_title", "Fishes");
-//                startActivity(intent);
-//            }
-//        });
-
 
         return view;
     }

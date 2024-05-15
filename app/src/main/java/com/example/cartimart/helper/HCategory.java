@@ -32,22 +32,34 @@ public class HCategory extends SQLiteOpenHelper {
                 + "created_at TEXT"
                 + ")";
         db.execSQL(CREATE_TABLE_QUERY);
-        category = new Category(1,"Fish", R.drawable.cartiad1,"2024-05-09 21:17");
-        x = this.addCategory(category);
-        category = new Category(1,"Fish",R.drawable.cartiad1,"2024-05-09 21:17");
-        x = this.addCategory(category);
-        category = new Category(1,"Fish",R.drawable.cartiad1,"2024-05-09 21:17");
-        x = this.addCategory(category);
-        category = new Category(1,"Fish",R.drawable.cartiad1,"2024-05-09 21:17");
-        x = this.addCategory(category);
-        category = new Category(1,"Fish",R.drawable.cartiad1,"2024-05-09 21:17");
-        x = this.addCategory(category);
-        category = new Category(1,"Fish",R.drawable.cartiad1,"2024-05-09 21:17");
-        x = this.addCategory(category);
-        category = new Category(1,"Fish",R.drawable.cartiad1,"2024-05-09 21:17");
-        x = this.addCategory(category);
-        category = new Category(1,"Fish",R.drawable.cartiad1,"2024-05-09 21:17");
-        x = this.addCategory(category);
+//        category = new Category(1,"Fish", R.drawable.cartiad1,"2024-05-09 21:17");
+//        x = this.addCategory(category);
+//        category = new Category(1,"Fish",R.drawable.cartiad1,"2024-05-09 21:17");
+//        x = this.addCategory(category);
+//        category = new Category(1,"Fish",R.drawable.cartiad1,"2024-05-09 21:17");
+//        x = this.addCategory(category);
+//        category = new Category(1,"Fish",R.drawable.cartiad1,"2024-05-09 21:17");
+//        x = this.addCategory(category);
+//        category = new Category(1,"Fish",R.drawable.cartiad1,"2024-05-09 21:17");
+//        x = this.addCategory(category);
+//        category = new Category(1,"Fish",R.drawable.cartiad1,"2024-05-09 21:17");
+//        x = this.addCategory(category);
+//        category = new Category(1,"Fish",R.drawable.cartiad1,"2024-05-09 21:17");
+//        x = this.addCategory(category);
+//        category = new Category(1,"Fish",R.drawable.cartiad1,"2024-05-09 21:17");
+//        x = this.addCategory(category);
+
+        this.addCategory(new Category(1,"FRUITS", R.drawable.fruits_item, "2024-05-09"));
+        this.addCategory(new Category(2,"VEGGIES", R.drawable.veggies_item, "2024-05-09"));
+        this.addCategory(new Category(3,"FISH", R.drawable.fishes_item, "2024-05-09"));
+        this.addCategory(new Category(4,"BEEF", R.drawable.beef_item, "2024-05-09"));
+        this.addCategory(new Category(5,"POULTRY", R.drawable.poultry_item, "2024-05-09"));
+        this.addCategory(new Category(7, "PORK", R.drawable.pork_item, "2024-05-09"));
+        this.addCategory(new Category(8, "MILK", R.drawable.cartiad1, "2024-05-09"));
+        this.addCategory(new Category(9, "LEGUMES", R.drawable.legumes_item, "2024-05-09"));
+        this.addCategory(new Category(10, "SUGAR", R.drawable.sugar_item, "2024-05-09"));
+
+
     }
 
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
@@ -90,5 +102,6 @@ public class HCategory extends SQLiteOpenHelper {
         return cat_list;
 
     }
+
 
 }

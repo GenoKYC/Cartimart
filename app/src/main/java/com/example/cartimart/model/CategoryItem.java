@@ -6,13 +6,13 @@ public class CategoryItem {
 
     private int category_id;
 
-    private String citem_name;
+    private String citem_name = "";
 
-    private String image_url;
+    private int image_url;
 
     private String created_at;
 
-    public CategoryItem(int id, int category_id, String citem_name, String image_url, String created_at){
+    public CategoryItem(int id, int category_id, String citem_name, int image_url, String created_at){
         this.id = id;
         this.category_id = category_id;
         this.citem_name = citem_name;
@@ -20,11 +20,11 @@ public class CategoryItem {
         this.created_at = created_at;
     }
 
-    public int getId(){
+    public int getCId(){
         return id;
     }
 
-    public void setId(int id){this.id = id;}
+    public void setCId(int id){this.id = id;}
 
 
     public int getCategory_id(){
@@ -41,9 +41,13 @@ public class CategoryItem {
     public void setCitem_name(String citem_name){this.citem_name = citem_name;}
 
 
-    public String getImage_url(){
+    public int getImage_url(){
         return image_url;
     }
 
-    public void setImage_url(String image_url){this.image_url = image_url;}
+    public void setImage_url(int image_url){this.image_url = image_url;}
+
+    public String getCreated_at(){ return created_at;}
+
+    public void setCreated_at(String created_at){this.created_at = created_at;}
 }

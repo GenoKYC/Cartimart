@@ -19,28 +19,16 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class About extends AppCompatActivity {
-    SharedPreferences sharedPref;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_about);
-       /* sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
-        String Rdata = sharedPref.getString("data", "data2");
-        // Get the ActionBar
-*/
-        Intent intent = getIntent();
-        String Rdata = intent.getStringExtra("data");
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                assert Rdata != null;
-                if(Rdata.equals("data")){
-                    finish();
-                }
-            }
-        },100);
-
-
-
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            return insets;
+        });
     }
 }
+

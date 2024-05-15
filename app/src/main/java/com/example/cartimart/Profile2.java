@@ -3,7 +3,9 @@ package com.example.cartimart;
 import static androidx.core.content.ContextCompat.startActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +16,9 @@ import androidx.fragment.app.Fragment;
 import com.example.cartimart.R;
 
 public class Profile2 extends Fragment {
+
+    String searchValue;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
