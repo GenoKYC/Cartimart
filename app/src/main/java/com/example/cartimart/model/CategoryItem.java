@@ -10,13 +10,17 @@ public class CategoryItem {
 
     private int image_url;
 
+    private double citem_price;
     private String created_at;
 
-    public CategoryItem(int id, int category_id, String citem_name, int image_url, String created_at){
+
+
+    public CategoryItem(int id, int category_id, String citem_name, int image_url,double citem_price, String created_at){
         this.id = id;
         this.category_id = category_id;
         this.citem_name = citem_name;
         this.image_url = image_url;
+        this.citem_price = citem_price;
         this.created_at = created_at;
     }
 
@@ -46,6 +50,10 @@ public class CategoryItem {
     }
 
     public void setImage_url(int image_url){this.image_url = image_url;}
+
+    public double getCitem_price(){return citem_price;}
+
+    public void setCitem_price(double citem_price){this.citem_price = citem_price;}
 
     public String getCreated_at(){ return created_at;}
 

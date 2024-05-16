@@ -30,16 +30,17 @@ public class HCategoryItem extends SQLiteOpenHelper {
                 + "category_id INT,"
                 + "citem_name TEXT,"
                 + "img_url INT,"
+                + "citem_price DOUBLE,"
                 + "created_at TEXT"
                 + ")";
         db.execSQL(CREATE_TABLE_QUERY);
 
-       this.addCategoryItems(new CategoryItem(1, 1, "Manga", R.drawable.fruits_item, "2024-05-09"));
-       this.addCategoryItems(new CategoryItem(2, 1, "Watermelon", R.drawable.fruits_item, "2024-05-09"));
-       this.addCategoryItems(new CategoryItem(3, 2, "Eggplant", R.drawable.veggies_item, "2024-05-09"));
-       this.addCategoryItems(new CategoryItem(4, 2, "Sitaw", R.drawable.veggies_item, "2024-05-09"));
-       this.addCategoryItems(new CategoryItem(5, 3, "Bangus", R.drawable.fishes_item, "2024-05-09"));
-       this.addCategoryItems(new CategoryItem(7, 3, "Tilapia", R.drawable.fishes_item, "2024-05-09"));
+       this.addCategoryItems(new CategoryItem(1, 1, "Manga", R.drawable.fruits_item, 55.00,"2024-05-09"));
+       this.addCategoryItems(new CategoryItem(2, 1, "Watermelon", R.drawable.fruits_item,80.00 ,"2024-05-09"));
+       this.addCategoryItems(new CategoryItem(3, 2, "Eggplant", R.drawable.veggies_item, 12.00,"2024-05-09"));
+       this.addCategoryItems(new CategoryItem(4, 2, "Sitaw", R.drawable.veggies_item, 12.00,"2024-05-09"));
+       this.addCategoryItems(new CategoryItem(5, 3, "Bangus", R.drawable.fishes_item, 50.00,"2024-05-09"));
+       this.addCategoryItems(new CategoryItem(7, 3, "Tilapia", R.drawable.fishes_item,50.00, "2024-05-09"));
     }
 
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {

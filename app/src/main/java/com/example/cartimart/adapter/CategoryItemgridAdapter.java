@@ -16,6 +16,7 @@ import com.example.cartimart.model.Category;
 import com.example.cartimart.model.CategoryItem;
 
 import java.util.ArrayList;
+import java.util.Locale;
 
 public class CategoryItemgridAdapter extends ArrayAdapter<CategoryItem> {
     public CategoryItemgridAdapter(@NonNull Context context, ArrayList<CategoryItem> categoryItemArrayList) {
@@ -36,9 +37,13 @@ public class CategoryItemgridAdapter extends ArrayAdapter<CategoryItem> {
         TextView catid = listitemView.findViewById(R.id.catitemid);
         TextView catname = listitemView.findViewById(R.id.catitemname);
         ImageView catimg = listitemView.findViewById(R.id.catitemimg);
+        TextView catitemprice = listitemView.findViewById(R.id.catitemprice);
 
         catname.setText(categoryitemmodel.getCitem_name());
         catid.setText(String.valueOf(categoryitemmodel.getCId()));
         catimg.setImageResource(categoryitemmodel.getImage_url());
+        catitemprice.setText(String.format(Locale.getDefault(), "%.2f", categoryitemmodel.getCitem_price()));
+
+
         return listitemView;
     }}
