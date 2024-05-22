@@ -74,6 +74,7 @@ public class Home2 extends Fragment {
         categoryModelArrayList.add(new Category(10, "SUGAR", R.drawable.sugar_item, "2024-05-09"));
         Log.d("CategoryArray", categoryModelArrayList.toString());
 
+        //gridview
         CategorygridAdapter adapter = new CategorygridAdapter(this.getContext(), categoryModelArrayList);
         categoryGV.setAdapter(adapter);
 

@@ -1,6 +1,8 @@
 package com.example.cartimart.model;
 
-public class Cart
+import java.io.Serializable;
+
+public class Cart implements Serializable
 {
     private int id;
 
@@ -11,6 +13,7 @@ public class Cart
     private double item_subtotal;
     private String created_at;
 
+    private int img_view;
 
     public Cart(int pid, String usern, String pitem_name, double pitem_prc, int pitem_qty, double pitem_subtotal){
         this.id = pid;
@@ -49,6 +52,12 @@ public class Cart
     public String getCreated_at(){return created_at;}
 
     public void setCreated_at(String created_at){this.created_at = created_at;}
+
+    public int getImg_view(){
+        return img_view;
+    }
+
+    public void setImage_url(int img_view){this.img_view = img_view;}
 }
 
 // add getter and setter below

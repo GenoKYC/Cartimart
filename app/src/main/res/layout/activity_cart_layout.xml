@@ -1,15 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".CategoryItems">
+    android:layout_height="match_parent">
 
-
+    <!-- Include the appbar layout -->
     <include
-        android:id="@+id/include2"
+        android:id="@+id/headerbar"
         layout="@layout/activity_ctgitem_toolbar"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -21,24 +18,28 @@
         android:layout_marginEnd="220dp"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@id/include2"
+        android:text="CART"
+        app:layout_constraintBottom_toBottomOf="@id/headerbar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@id/include2"
-        app:layout_constraintTop_toTopOf="@id/include2"
+        app:layout_constraintStart_toStartOf="@id/headerbar"
+        app:layout_constraintTop_toTopOf="@id/headerbar"
         app:layout_constraintVertical_bias="0.484" />
 
     <GridView
-            android:id="@+id/idCategoryItems"
+        android:id="@+id/CartGridView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_height="600dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="16dp"
         android:horizontalSpacing="6dp"
-        android:numColumns="2"
+        android:numColumns="1"
         android:verticalSpacing="6dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/include2" />
+        app:layout_constraintTop_toBottomOf="@id/headerbar"
+        app:layout_constraintVertical_bias="0.0"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

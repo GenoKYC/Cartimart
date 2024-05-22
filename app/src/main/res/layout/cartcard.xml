@@ -27,13 +27,14 @@
 
         <TextView
             android:id="@+id/cartitemname_view"
-            android:layout_width="70dp"
+            android:layout_width="108dp"
             android:layout_height="22dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
-            android:gravity="center"
+            android:gravity="left"
             android:text="Item Name"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/cartitemimg" />
 

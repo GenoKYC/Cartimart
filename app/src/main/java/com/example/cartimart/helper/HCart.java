@@ -65,20 +65,9 @@ public class HCart extends SQLiteOpenHelper {
     }
 
     //remove item from cart function
-    public static int deleteItemCart(String item_name, String usern, HCart dbHelper){
-        SQLiteDatabase db = dbHelper.getWritableDatabase();
-        ContentValues contentValues = new ContentValues();
-        contentValues.put("item_name",item_name);
-        contentValues.put("usern",usern);
-
-        int deleteRows = db.delete(HCart.TABLE_NAME,
-                "item_name" + "= ? AND" +
-                "usern" + " = ? AND ",
-
-                new String[]{item_name,usern});
-
-        db.close();
-        return deleteRows;
+    public ArrayList<Cart> removeCartItems(Cart cartitem){
+        CART_ITEM.remove(cartitem);
+        return CART_ITEM;
     }
 
 

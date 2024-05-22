@@ -13,11 +13,14 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 
 import com.example.cartimart.Cart2;
+import com.example.cartimart.Cart_Layout;
+import com.example.cartimart.CategoryItems;
 import com.example.cartimart.R;
 import com.example.cartimart.model.Cart;
 import com.example.cartimart.model.CategoryItem;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 public class HAddToCart extends BottomSheetDialogFragment {
@@ -26,7 +29,7 @@ public class HAddToCart extends BottomSheetDialogFragment {
     private String catname = "";
     private String catId = "";
     ArrayList<Cart> CartItems = new ArrayList<Cart>();
-    //last act edit
+
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.bs_addtocard, container, false);
@@ -90,18 +93,25 @@ public class HAddToCart extends BottomSheetDialogFragment {
                             item.getItem_name() + "\t" +
                             item.getItem_price() + "\t" +
                             item.getItem_qty() + "\t" +
+                            item.getImg_view() + "\t" +
                             item.getItem_subtotal();
                             Log.d("CART_ITEM",msg);
                 }
 
                 Log.d("CART_ITEM","Items in the cart " + CartItems.size());
+//                Intent intent = new Intent(CategoryItems.this, Cart2.class);
+//                intent.putExtra(categoryItemModelArrayList)
+
             }
         });
         btnviewcart.setOnClickListener((new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // show cart activity
-                // pass CartItems as bundle to cart activity
+
+
+                Intent intent = new Intent(v.getContext(), Cart_Layout.class);
+                intent.putExtra("CartItems",CartItems);
+                startActivity(intent);
             }
         }));
 
