@@ -3,6 +3,7 @@ package com.example.cartimart.adapter;
 import static androidx.core.content.ContentProviderCompat.requireContext;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -47,7 +48,6 @@ public class CartgridAdapter extends ArrayAdapter<Cart> {
             TextView cartitemname_view = listitemView.findViewById(R.id.cartitemname_view);
             TextView totalitem_priceview = listitemView.findViewById(R.id.totalitem_priceview);
             TextView qnty_view = listitemView.findViewById(R.id.qnty_view);
-            Button removebtn = listitemView.findViewById(R.id.remove_button);
 
 
             cartitemname_view.setText(cartmodel.getItem_name());
@@ -56,17 +56,8 @@ public class CartgridAdapter extends ArrayAdapter<Cart> {
             return listitemView;
 
 
-//            removebtn.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View v) {
-//                    Toast.makeText(requireContext(), "item removed", Toast.LENGTH_SHORT).show();
-////                   navigateToNextActivity();
-//                    HCart cart = new HCart(getContext());
-//
-//                }
-//            });
 
-        }
+    }
 
 
 

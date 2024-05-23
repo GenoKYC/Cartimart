@@ -1,12 +1,22 @@
 package com.example.cartimart;
 
+import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ListView;
+
+import com.example.cartimart.adapter.ListgridAdapter;
+import com.example.cartimart.model.NotesList;
+
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -15,28 +25,24 @@ import android.view.ViewGroup;
  */
 public class List2 extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
+    // Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
+    // Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    Button createList;
+    ListView idListItems;
+    ListgridAdapter adapter;
+    DatabaseNotesList dbHelper;
+
 
     public List2() {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment List2.
-     */
-    // TODO: Rename and change types and number of parameters
     public static List2 newInstance(String param1, String param2) {
         List2 fragment = new List2();
         Bundle args = new Bundle();
@@ -53,12 +59,35 @@ public class List2 extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
+
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_list2, container, false);
+
     }
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        createList = view.findViewById(R.id.buttonCreateList);
+        createList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), listAdding.class);
+                getActivity().startActivity(intent);
+            }
+        });
+        idListItems = view.findViewById(R.id.idListItems);
+        dbHelper = new DatabaseNotesList(this);
+        List<NotesList> notesLists = dbHelper.getAlladdress();
+        adapter = new ListgridAdapter(this,notesLists);
+        idListItems.setAdapter(adapter);
+
+
+    }
+
 }

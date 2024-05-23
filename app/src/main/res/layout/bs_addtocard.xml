@@ -114,7 +114,7 @@
 
     <Button
         android:id="@+id/btnaddtocart"
-        android:layout_width="150dp"
+        android:layout_width="120dp"
         android:layout_height="45dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"
@@ -128,7 +128,7 @@
 
     <Button
         android:id="@+id/btnViewCart"
-        android:layout_width="150dp"
+        android:layout_width="120dp"
         android:layout_height="45dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"

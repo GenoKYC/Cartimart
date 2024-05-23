@@ -16,6 +16,7 @@ import com.example.cartimart.Cart2;
 import com.example.cartimart.Cart_Layout;
 import com.example.cartimart.CategoryItems;
 import com.example.cartimart.R;
+import com.example.cartimart.interfaces.CartUpdateListener;
 import com.example.cartimart.model.Cart;
 import com.example.cartimart.model.CategoryItem;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
@@ -23,7 +24,7 @@ import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-public class HAddToCart extends BottomSheetDialogFragment {
+public class HAddToCart extends BottomSheetDialogFragment  {
     private TextView txtid, txtqty, txtitemname, txtitemprice;
     private int number = 0;
     private String catname = "";
@@ -133,6 +134,7 @@ public class HAddToCart extends BottomSheetDialogFragment {
         Log.d("CART_ITEM", "cart item count " + CartItems.size());
         return CartItems.size();
     }
+
 
 
 }
