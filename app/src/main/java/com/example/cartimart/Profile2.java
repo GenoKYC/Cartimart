@@ -65,7 +65,7 @@ public class Profile2 extends Fragment {
     }
 
     private void openAutoSchedActivity() {
-        Intent intent = new Intent(getActivity(), AutoSchedule.class);
+        Intent intent = new Intent(getActivity(), listAdding.class);
         startActivity(intent);
     }
 

@@ -34,10 +34,6 @@ public class List2 extends Fragment {
     private String mParam1;
     private String mParam2;
     Button createList;
-    ListView idListItems;
-    ListgridAdapter adapter;
-    DatabaseNotesList dbHelper;
-
 
     public List2() {
         // Required empty public constructor
@@ -77,15 +73,12 @@ public class List2 extends Fragment {
         createList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), listAdding.class);
+                Intent intent = new Intent(getActivity(), SplashScreenLoading.class);
                 getActivity().startActivity(intent);
             }
         });
-        idListItems = view.findViewById(R.id.idListItems);
-        dbHelper = new DatabaseNotesList(this);
-        List<NotesList> notesLists = dbHelper.getAlladdress();
-        adapter = new ListgridAdapter(this,notesLists);
-        idListItems.setAdapter(adapter);
+
+
 
 
     }
